@@ -7,8 +7,8 @@
     <template v-if="children">
       <SubMenuItem
         v-for="(child, index) in children"
-        :key="index"
-        :index="index"
+        :key="`${props.index}-${subindex}`"
+        :index="`${props.index}-${subindex}`"
         :title="child.title"
         :children="child.children"
       />
@@ -18,5 +18,5 @@
 <script setup>
 import { Document, Menu as IconMenu, Location, Setting } from '@element-plus/icons-vue'
 import SubMenuItem from './SubMenuItem.vue'
-const { title, children, index } = defineProps(['title', 'children', 'index'])
+const props = defineProps(['title', 'children', 'index'])
 </script>
