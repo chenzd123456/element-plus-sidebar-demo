@@ -30,11 +30,11 @@ export const useMenuStore = defineStore('menu', () => {
       path: '/', // 对应路由路径
     },
     {
-      title: 'test', // 测试菜单项（有子菜单）
+      title: 'test1', // 测试菜单项（有子菜单）
       children: [
         // 子菜单数组
         {
-          title: 'test', // 二级菜单项
+          title: 'test2', // 二级菜单项
           children: [
             // 三级菜单数组
             {

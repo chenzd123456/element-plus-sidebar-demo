@@ -15,6 +15,7 @@
       :index="index"
       :title="item.title"
       :children="item.children"
+      :path="item.path"
     ></TopMenuItem>
   </el-menu>
 </template>
