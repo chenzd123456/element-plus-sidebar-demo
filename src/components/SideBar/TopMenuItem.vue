@@ -1,14 +1,14 @@
 <template>
-  <el-sub-menu :index="index">
+  <el-sub-menu :index="props.index">
     <template #title>
       <el-icon><location /></el-icon>
-      <span>{{ title }}</span>
+      <span>{{ props.title }}</span>
     </template>
     <template v-if="children">
       <SubMenuItem
         v-for="(child, index) in children"
-        :key="`${props.index}-${subindex}`"
-        :index="`${props.index}-${subindex}`"
+        :key="`${props.index}-${index}`"
+        :index="`${props.index}-${index}`"
         :title="child.title"
         :children="child.children"
       />
@@ -16,7 +16,7 @@
   </el-sub-menu>
 </template>
 <script setup>
-import { Document, Menu as IconMenu, Location, Setting } from '@element-plus/icons-vue'
+import { Location } from '@element-plus/icons-vue'
 import SubMenuItem from './SubMenuItem.vue'
 const props = defineProps(['title', 'children', 'index'])
 </script>
